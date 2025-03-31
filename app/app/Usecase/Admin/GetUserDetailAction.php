@@ -46,7 +46,7 @@ class GetUserDetailAction
                 i.address
             FROM 
                 users u
-            LEFT JOIN users_info i ON u.id = i.user_id
+            INNER JOIN users_info i ON u.id = i.user_id
             WHERE 
                 u.id = :id
                 AND u.del_flg = false
